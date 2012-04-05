@@ -17,12 +17,16 @@ class BitlifyTest < Test::Unit::TestCase
     VCR.use_cassette('bitly_limit_exceeded') do
       assert_equal("http://radiospiel.org/foo", Bitly.shorten("http://radiospiel.org/foo"))
     end
+
+    assert_equal("http://radiospiel.org/foo", Bitly.shorten("http://radiospiel.org/foo"))
   end
 
   def test_ok
     VCR.use_cassette('bitly_ok') do
       assert_equal("http://bit.ly/HV7woD", Bitly.shorten("http://radiospiel.org/a=1&b=2"))
     end
+
+    assert_equal("http://bit.ly/HV7woD", Bitly.shorten("http://radiospiel.org/a=1&b=2"))
   end
 
   def test_url_base
