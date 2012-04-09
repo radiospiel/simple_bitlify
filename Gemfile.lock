@@ -29,7 +29,7 @@ GEM
       ruby-debug-base19 (>= 0.11.19)
     ruby_core_source (0.1.5)
       archive-tar-minitar (>= 0.5.2)
-    simple_cache (0.8.1)
+    simple_cache_rs (0.9.1)
       sqlite3
     simplecov (0.6.1)
       multi_json (~> 1.0)
@@ -49,7 +49,7 @@ DEPENDENCIES
   jeweler
   psych
   ruby-debug19
-  simple_cache
+  simple_cache_rs
   simplecov
   vcr
   webmock
